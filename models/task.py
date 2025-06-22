@@ -61,3 +61,7 @@ class Task:
         """
         status = "Erledigt" if self.completed else "Offen"
         return f"{self.name} ({self.priority}) – {status} – erstellt am {self.created_at.strftime('%Y-%m-%d %H:%M:%S')}"
+
+    class RewardedTask(Task):
+        def get_reward(self):
+            return "Belohnung: Du hast die Aufgabe erledigt!"
