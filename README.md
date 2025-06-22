@@ -1,8 +1,8 @@
-# 📝 To-Do Team App
+# To-Do Team App
 
-Eine objektorientierte, modularisierte To-Do-App für Einzelpersonen und Teams – mit Punktesystem und Belohnungsfunktion.
+Eine objektorientierte, modularisierte To-Do-App für Einzelpersonen und Teams, mit Punktesystem und Belohnungsfunktion.
 
-## 🔧 Funktionen
+## Funktionen
 
 - Aufgaben erstellen, bearbeiten, löschen, erledigen
 - Priorisierung (Hoch / Mittel / Niedrig)
@@ -11,4 +11,27 @@ Eine objektorientierte, modularisierte To-Do-App für Einzelpersonen und Teams �
 - Statistik zur Produktivität
 - Speicherung per JSON-Datei
 
-## 🧱 Projektstruktur
+# Projektstruktur
+
+code/
+
+data/
+tasks.json
+
+models/
+task.py
+
+services/
+task_manager.py
+
+venv/
+Include
+Lib
+Scripts
+.gitignore
+pyvenv.cfg
+
+.gitignore
+doku.txt
+main.py
+README.md

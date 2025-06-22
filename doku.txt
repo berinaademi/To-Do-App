@@ -25,7 +25,7 @@ Zusätzlich bietet das Menü die Möglichkeit, ausschließlich offene Aufgaben a
 
 Die App ist so strukturiert, dass alle Klassen und logischen Funktionen in separaten Modulen organisiert sind (models/, services/).
 Dies gewährleistet Übersichtlichkeit und Wartbarkeit.
-Die Verwendung von Docstrings und Kommentaren sorgt für eine klare Dokumentation innerhalb des Codes,
+Die Verwendung von Kommentaren sorgt für eine klare Dokumentation innerhalb des Codes,
 während das Dateisystem durch die .gitignore, die virtuelle Umgebung (venv/) und eine README.md sauber gehalten wird.
 
 Insgesamt bietet die App eine einfache, aber erweiterbare Plattform zur Aufgabenverwaltung mit einem motivierenden Belohnungssystem,
