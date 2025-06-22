@@ -1,0 +1,32 @@
+Dokumentation der Funktionsweise
+
+Die To-Do-App wurde als objektorientiertes, modular aufgebautes Python-Programm umgesetzt.
+Sie ermöglicht es Benutzern, Aufgaben effizient zu verwalten, den Fortschritt zu verfolgen und durch ein integriertes Punktesystem zusätzlich motiviert zu werden.
+Die Anwendung basiert vollständig auf Python-Standardbibliotheken und verwendet JSON zur Datenpersistenz.
+
+Im Zentrum der App steht die Klasse Task, die eine einzelne Aufgabe repräsentiert.
+Jede Aufgabe besitzt Eigenschaften wie Name, Priorität, Erstellungsdatum und Status (offen oder erledigt).
+Die Task-Klasse bietet Methoden zur Umwandlung in ein Dictionary zur Speicherung sowie zur Statusänderung.
+
+Die zentrale Steuerung erfolgt über die Klasse TaskManager, die alle Aufgaben verwaltet.
+Sie kapselt Funktionen zum Hinzufügen, Bearbeiten, Erledigen und Löschen von Aufgaben.
+Ergänzend berechnet der TaskManager Punkte je nach Priorität der erledigten Aufgaben:
+Hoch (10 Punkte), Mittel (5 Punkte), Niedrig (2 Punkte).
+Erreicht der Benutzer mindestens 10 Punkte, wird automatisch eine motivierende Belohnungsnachricht ausgegeben, und die Punkte werden zurückgesetzt.
+Die Nachrichten werden dabei zufällig aus einer vordefinierten Liste gewählt.
+
+Alle Daten, darunter Aufgabenliste, Punktestand und erledigte Aufgaben, werden in einer JSON-Datei gespeichert (data/tasks.json).
+Beim Start der Anwendung werden diese Daten geladen, und beim Beenden oder Aktualisieren der Liste werden sie gespeichert.
+Dadurch ist sichergestellt, dass keine Fortschritte verloren gehen.
+
+Die Benutzeroberfläche besteht aus einem einfachen textbasierten Menü, das im Terminal angezeigt wird.
+Der Benutzer kann über Zifferneingaben zwischen verschiedenen Aktionen wählen, z. B. Aufgaben anzeigen, neue Aufgaben hinzufügen, Aufgaben als erledigt markieren oder Statistiken einsehen.
+Zusätzlich bietet das Menü die Möglichkeit, ausschließlich offene Aufgaben anzeigen zu lassen.
+
+Die App ist so strukturiert, dass alle Klassen und logischen Funktionen in separaten Modulen organisiert sind (models/, services/).
+Dies gewährleistet Übersichtlichkeit und Wartbarkeit.
+Die Verwendung von Docstrings und Kommentaren sorgt für eine klare Dokumentation innerhalb des Codes,
+während das Dateisystem durch die .gitignore, die virtuelle Umgebung (venv/) und eine README.md sauber gehalten wird.
+
+Insgesamt bietet die App eine einfache, aber erweiterbare Plattform zur Aufgabenverwaltung mit einem motivierenden Belohnungssystem,
+das durch saubere Architektur und objektorientierte Umsetzung überzeugt.
