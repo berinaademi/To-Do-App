@@ -29,7 +29,7 @@ class Task:
         """
         Konvertiert die Aufgabe in ein Dictionary zur Speicherung in JSON.
 
-        :return: Dictionary mit den Aufgabendaten
+        return: Dictionary mit den Aufgabendaten
         """
         return {
             "name": self.name,
@@ -62,6 +62,7 @@ class Task:
         status = "Erledigt" if self.completed else "Offen"
         return f"{self.name} ({self.priority}) – {status} – erstellt am {self.created_at.strftime('%Y-%m-%d %H:%M:%S')}"
 
-    class RewardedTask(Task):
-        def get_reward(self):
-            return "Belohnung: Du hast die Aufgabe erledigt!"
+
+class RewardedTask(Task):
+    def get_reward(self):
+        return "Belohnung: Du hast die Aufgabe erledigt!"

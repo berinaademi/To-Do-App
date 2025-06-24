@@ -2,7 +2,7 @@ import random
 import json
 import os
 from datetime import datetime
-from models.task import Task
+from models.task import RewardedTask
 
 
 class TaskManager:
@@ -34,7 +34,7 @@ class TaskManager:
         name: Name der Aufgabe
         priority: Priorität der Aufgabe (z.B. 'Hoch', 'Mittel', 'Niedrig')
         """
-        task = Task(name=name, priority=priority)
+        task = RewardedTask(name=name, priority=priority)
         self.tasks.append(task)
         self.save_data()
 
@@ -150,6 +150,7 @@ class TaskManager:
         if os.path.exists(self.data_file):
             with open(self.data_file, "r") as f:
                 data = json.load(f)
-                self.tasks = [Task.from_dict(t) for t in data.get("tasks", [])]
+                self.tasks = [RewardedTask.from_dict(
+                    t) for t in data.get("tasks", [])]
                 self.total_points = data.get("total_points", 0)
                 self.completed_count = data.get("completed_count", 0)
