@@ -24,14 +24,5 @@ task.py
 services/
 task_manager.py
 
-venv/
-Include
-Lib
-Scripts
-.gitignore
-pyvenv.cfg
-
-.gitignore
 doku.txt
 main.py
-README.md
