@@ -64,5 +64,9 @@ class Task:
 
 
 class RewardedTask(Task):
+    def complete(self):
+        super().complete()
+        print(self.get_reward())
+
     def get_reward(self):
         return "Belohnung: Du hast die Aufgabe erledigt!"

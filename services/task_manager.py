@@ -15,7 +15,7 @@ class TaskManager:
         """
         Initialisiert den TaskManager.
 
-        :param data_file: Pfad zur JSON-Datei, in der die Aufgaben gespeichert werden.
+        param data_file: Pfad zur JSON-Datei, in der die Aufgaben gespeichert werden.
         """
         self.data_file = data_file
         self.tasks = []
